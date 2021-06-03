@@ -1,4 +1,4 @@
-package com.hack.idc.ramen.person;
+package com.hack.idc.ramen.ui.participants;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,11 +16,11 @@ import com.hack.idc.ramen.R;
 import java.util.ArrayList;
 
 
-public class PersonAdapter extends ArrayAdapter<Person> {
+public class ParticipantsAdapter extends ArrayAdapter<Participants> {
     private Context m_Context;
     private int m_Resource;
 
-    public PersonAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Person> people){
+    public ParticipantsAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Participants> people){
         super(context,resource, people);
         m_Context = context;
         m_Resource = resource;

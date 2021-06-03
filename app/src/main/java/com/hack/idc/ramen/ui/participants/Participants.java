@@ -1,11 +1,12 @@
-package com.hack.idc.ramen.person;
+package com.hack.idc.ramen.ui.participants;
 
-public class Person {
+public class Participants {
+    int m_Id;
     int m_Image;
     String m_Name;
     String m_Des;
 
-    public Person(int image, String name, String des){
+    public Participants(int image, String name, String des){
         m_Des = des;
         m_Image = image;
         m_Name = name;
