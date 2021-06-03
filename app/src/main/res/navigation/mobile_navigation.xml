@@ -9,17 +9,17 @@
         android:id="@+id/navigation_home"
         android:name="com.hack.idc.ramen.ui.menu.MenuFragment"
         android:label="@string/title_menu"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_participants" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.hack.idc.ramen.ui.participants.ParticipantsFragment"
         android:label="@string/title_participants"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_manu" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.hack.idc.ramen.ui.billing.BillingFragment"
         android:label="@string/title_billing"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_billing" />
 </navigation>
