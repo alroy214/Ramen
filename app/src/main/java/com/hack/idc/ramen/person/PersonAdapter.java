@@ -26,18 +26,19 @@ public class PersonAdapter extends ArrayAdapter<Person> {
         m_Resource = resource;
     }
 
-    public View getView(int position, @Nullable View converview, @NonNull ViewGroup parent){
-        LayoutInflater layoutInflater = LayoutInflater.from(m_Context);
-
-        converview = layoutInflater.inflate(m_Resource, parent, false);
-        ImageView imageView = converview.findViewById(R.id.image);
-        TextView txtName = converview.findViewById(R.id.txtName);
-        TextView txtDes = converview.findViewById(R.id.txtDes);
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
+        if(convertView == null) {
+            LayoutInflater layoutInflater = LayoutInflater.from(m_Context);
+            convertView = layoutInflater.inflate(m_Resource, parent, false);
+        }
+        ImageView imageView = convertView.findViewById(R.id.image);
+        TextView txtName = convertView.findViewById(R.id.txtName);
+        TextView txtDes = convertView.findViewById(R.id.txtDes);
         imageView.setImageResource(getItem(position).getImage());
         txtDes.setText(getItem(position).getDes());
         txtName.setText(getItem(position).getName());
 
-        return converview;
+        return convertView;
 
     }
 }

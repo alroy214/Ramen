@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.hack.idc.ramen.ui.home.MenuFragment"
+        android:name="com.hack.idc.ramen.ui.menu.MenuFragment"
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.hack.idc.ramen.ui.dashboard.ParticipantsFragment"
+        android:name="com.hack.idc.ramen.ui.participants.ParticipantsFragment"
         android:label="@string/title_participants"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.hack.idc.ramen.ui.notifications.BillingFragment"
+        android:name="com.hack.idc.ramen.ui.billing.BillingFragment"
         android:label="@string/title_billing"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

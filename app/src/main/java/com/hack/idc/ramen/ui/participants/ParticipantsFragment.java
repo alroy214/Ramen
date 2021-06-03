@@ -1,4 +1,4 @@
-package com.hack.idc.ramen.ui.dashboard;
+package com.hack.idc.ramen.ui.participants;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,24 +16,14 @@ import com.hack.idc.ramen.databinding.FragmentDashboardBinding;
 
 public class ParticipantsFragment extends Fragment {
 
-    private ParticipantsViewModel participantsViewModel;
     private FragmentDashboardBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        participantsViewModel =
-                new ViewModelProvider(this).get(ParticipantsViewModel.class);
-
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textDashboard;
-        participantsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
 

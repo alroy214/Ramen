@@ -1,4 +1,4 @@
-package com.hack.idc.ramen.ui.home;
+package com.hack.idc.ramen.ui.menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,36 +22,14 @@ import java.util.ArrayList;
 
 public class MenuFragment extends Fragment {
 
-    private MenuViewModel menuViewModel;
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        menuViewModel =
-                new ViewModelProvider(this).get(MenuViewModel.class);
-
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
-        menuViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-
-
-
-        ListView listView = root.findViewById(R.id.listView);
-        ArrayList<Person> arr = new ArrayList<>();
-        arr.add(new Person(R.drawable.strawhat, "monket.D Luffy", "Bounty - 1.5B$"));
-        arr.add(new Person(R.drawable.strawhat, "Roronoa Zoro", "Bounty - 500M$"));
-        arr.add(new Person(R.drawable.strawhat, "Vinsmoke Sanji", "Bounty - 700M$"));
-
-        PersonAdapter personAdapter = new PersonAdapter(getContext(), R.layout.list_row, arr);
-
-        listView.setAdapter(personAdapter);
         return root;
     }
 
