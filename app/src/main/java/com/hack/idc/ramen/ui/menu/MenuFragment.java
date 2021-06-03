@@ -14,7 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.hack.idc.ramen.R;
-import com.hack.idc.ramen.databinding.FragmentHomeBinding;
+import com.hack.idc.ramen.databinding.FragmentManuBinding;
 import com.hack.idc.ramen.person.Person;
 import com.hack.idc.ramen.person.PersonAdapter;
 
@@ -22,14 +22,14 @@ import java.util.ArrayList;
 
 public class MenuFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentManuBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentManuBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+        final TextView textView = binding.textMenu;
         return root;
     }
 

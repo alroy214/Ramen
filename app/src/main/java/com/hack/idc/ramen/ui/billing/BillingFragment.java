@@ -12,18 +12,18 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.hack.idc.ramen.databinding.FragmentNotificationsBinding;
+import com.hack.idc.ramen.databinding.FragmentBillingBinding;
 
 public class BillingFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentBillingBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentBillingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
+        final TextView textView = binding.textParticipants;
         return root;
     }
 

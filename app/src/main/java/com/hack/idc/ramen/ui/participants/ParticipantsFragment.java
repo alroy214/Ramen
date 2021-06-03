@@ -14,7 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.hack.idc.ramen.R;
-import com.hack.idc.ramen.databinding.FragmentDashboardBinding;
+import com.hack.idc.ramen.databinding.FragmentParticipantsBinding;
 import com.hack.idc.ramen.person.Person;
 import com.hack.idc.ramen.person.PersonAdapter;
 
@@ -22,14 +22,14 @@ import java.util.ArrayList;
 
 public class ParticipantsFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentParticipantsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentParticipantsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
+        final TextView textView = binding.textParticipants;
 
         ListView listView = root.findViewById(R.id.listView);
         ArrayList<Person> arr = new ArrayList<>();
