@@ -30,7 +30,6 @@ public class ParticipantsFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textParticipants;
-
         ListView listView = root.findViewById(R.id.listView);
         ArrayList<Person> arr = new ArrayList<>();
         arr.add(new Person(R.drawable.strawhat, "monket.D Luffy", "Bounty - 1.5B$"));
