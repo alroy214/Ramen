@@ -2,17 +2,19 @@ package com.hack.idc.ramen.ui.menu;
 
 public class MenuItem {
     int m_Id;
+    int m_Count;
     String m_Image;
     String m_Name;
     String m_Ingredients;
-    String m_Price;
+    int m_Price;
 
-    public MenuItem(int id, String image, String name, String ingredients, String price) {
+    public MenuItem(int id, String image, String name, String ingredients, int price) {
         m_Id = id;
         m_Ingredients = ingredients;
         m_Price = price;
         m_Image = image;
         m_Name = name;
+        m_Count = 0;
     }
 
     public String getImage() {
@@ -27,7 +29,22 @@ public class MenuItem {
         return m_Ingredients;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return m_Price;
+    }
+
+    public int getCount() {
+        return m_Count;
+    }
+
+    public int increaseCount() {
+        return ++m_Count;
+    }
+
+    public int decreaseCount() {
+        if(m_Count == 0) {
+            return m_Count;
+        }
+        return --m_Count;
     }
 }

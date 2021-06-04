@@ -1,38 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@id/image"
-        android:src="@color/purple_200"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="5dp"
+        android:elevation="10dp">
 
-    <TextView
-        android:id="@+id/txtDes"
-        android:layout_toRightOf="@id/image"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtName"
-        android:maxLength="50"
-        android:singleLine="true"
-        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:text="Des"
-        />
+        <ImageView
+            android:id="@id/image"
+            android:src="@color/purple_200"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_toRightOf="@id/image"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:text="Name"
-        />
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginStart="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/txtDes"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:maxLength="50"
+            android:singleLine="true"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:text="Des" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="Price" />
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_add"
+            app:tint="@color/design_default_color_primary" />
+        <ImageView
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_remove"
+            app:tint="@color/design_default_color_primary" />
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_toEndOf="@id/remove"
+            android:layout_gravity="end"
+            android:textSize="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

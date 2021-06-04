@@ -60,6 +60,8 @@ public class ScanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mCodeScanner.startPreview();
+                Intent myIntent = new Intent(ScanActivity.this, MainActivity.class);
+                startActivity(myIntent);
             }
         });
     }

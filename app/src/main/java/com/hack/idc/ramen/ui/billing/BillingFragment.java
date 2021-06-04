@@ -11,8 +11,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.hack.idc.ramen.R;
 import com.hack.idc.ramen.databinding.FragmentBillingBinding;
+
+import java.util.ArrayList;
 
 public class BillingFragment extends Fragment {
 
@@ -24,6 +29,7 @@ public class BillingFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textParticipants;
+
         return root;
     }
 

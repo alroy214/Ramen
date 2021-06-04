@@ -54,17 +54,18 @@ public class Utils {
     }
 
     @NonNull
-    public static String getJSON(String url, Context context) {
+    public static String
+    getJSON(String url, Context context) {
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(context);
 
-// Request a string response from the provided URL.
+        // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        Log.d("TAG","Response is: "+ response.substring(0,500));
+                        Log.d("TAG","Response is: "+ response);
                     }
                 }, new Response.ErrorListener() {
             @Override
