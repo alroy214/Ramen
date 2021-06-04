@@ -24,6 +24,10 @@ import com.hack.idc.ramen.ui.billing.TopLinearLayoutManager;
 import com.hack.idc.ramen.ui.participants.Participants;
 import com.hack.idc.ramen.ui.participants.ParticipantsAdapter;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -51,6 +55,7 @@ public class MenuFragment extends Fragment implements SubCategoryAdapter.ISubCat
         searchedList = new ArrayList<>();
 
         subCategoryList = new ArrayList<>();
+        subCategoryList.add(new SubCategory(0,0,"All"));
         subCategoryList.add(new SubCategory(1,1,"Breakfast"));
         subCategoryList.add(new SubCategory(2,2,"Salad"));
         subCategoryList.add(new SubCategory(3,3,"Drinks"));
@@ -131,4 +136,5 @@ public class MenuFragment extends Fragment implements SubCategoryAdapter.ISubCat
 
         rvSubCategory.smoothScrollToPosition(position);
     }
+
 }

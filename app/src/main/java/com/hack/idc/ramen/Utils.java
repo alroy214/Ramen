@@ -52,32 +52,6 @@ public class Utils {
 
         return new JSONObject(jsonString);
     }
-
-    @NonNull
-    public static String
-    getJSON(String url, Context context) {
-        // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(context);
-
-        // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        // Display the first 500 characters of the response string.
-                        Log.d("TAG","Response is: "+ response);
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("TAG", "onErrorResponse: That didn't work! " + error);
-            }
-        });
-
-// Add the request to the RequestQueue.
-        queue.add(stringRequest);
-        return "";
-    }
 /*
     public static void Test() {
         // Instantiate the RequestQueue.
